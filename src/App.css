@@ -1,0 +1,44 @@
+.background {
+  position: relative;
+  background-color: #E6E0F8;
+  height: 100vh;
+  width: 100vw;
+}
+
+.text1 {
+  position: absolute;
+  top: 21px;
+  left: 100px;
+  font-size: 40px; /* Добавил для читаемости */
+}
+
+.text2 {
+  position: absolute;
+  top: 305px;
+  left: 490px;
+  font-size: 24px;
+}
+
+.button {
+  width: 252px;          /* Ширина кнопки */
+  height: 60px;          /* Высота кнопки */
+  background: #A08BFA;   /* Фиолетовый фон (как на скриншоте) */
+  color: white;          /* Белый текст */
+  border: none;          /* Убираем стандартную рамку */
+  border-radius: 32px;    /* Закругленные углы */
+  font-size: 18px;       /* Размер текста */
+  font-weight: medium;     /* Жирный шрифт */
+  cursor: pointer;       /* Курсор-указатель */
+  display: flex;         /* Для центрирования текста */
+  align-items: center;   /* Вертикальное центрирование */
+  justify-content: center; /* Горизонтальное центрирование */
+  position: absolute;    /* Абсолютное позиционирование (как у вас в проекте) */
+  top: 420px;            /* Отступ сверху */
+  left: 50%;             /* Центрирование по горизонтали */
+  transform: translateX(-50%); /* Точное центрирование */
+}
+
+/* Эффект при наведении */
+.button:hover {
+  background: #8875db;   /* Темнее на 10% */
+}

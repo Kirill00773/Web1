@@ -1,0 +1,182 @@
+.P1{
+position: absolute;
+width: 81.05px;
+height: 51.07px;
+left: 550px;
+top: 121px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+
+
+color: #000000;
+
+
+
+
+}
+
+.P2{
+position: absolute;
+width: 351.59px;
+height: 27.24px;
+left: 550px;
+top: 190px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;
+
+}
+
+.B1{
+position: absolute;
+width: 351.59px;
+height: 27.24px;
+left: 454px;
+top: 218px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #9781FD;
+
+}
+
+.P4{
+position: absolute;
+left: 550px;
+top: 310.32px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 20px;
+color: #9781FD;
+
+}
+.IMG1{
+    position: absolute;
+    left: 550px;
+    top: 349px;
+}
+
+
+.divider1{
+  height: 2.2px;
+  background-color: #9781FD; /* Цвет линии */
+  position: absolute;
+  top: 380.68px;
+  left: 550px;
+  width: 489px;
+}
+
+.P5{
+    /* Password */
+
+position: absolute;
+width: 73.06px;
+height: 22.7px;
+left: 550px;
+top: 438.55px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+color: #9781FD;
+
+}
+
+.IMG2{
+    position: absolute;
+    left: 550px;
+    top: 473px;
+}
+
+
+.divider2{
+  height: 2.2px;
+  background-color: #9781FD; /* Цвет линии */
+  position: absolute;
+  top: 508.91px;
+  left: 550px;
+  width: 489px;
+}
+
+.B2{
+position: absolute;
+  width: 489.01px;
+  height: 60.01px;
+  left: 550px;
+  top: 618.00px;
+  
+  background: #A08BFA;
+  box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  
+ 
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0); 
+  font-family: 'Popins', sans-serif; 
+  font-weight: 500; 
+  cursor: pointer;
+  
+  
+  transition: background 0.3s;
+}
+
+.B2:hover {
+  background: #8A72F5; 
+}
+
+.B2:focus {
+  outline: 2px solid #6A4DFF; 
+}
+
+
+.email-input, .password-input {
+  position: absolute;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Poppins';
+  color: #9781FD;
+}
+
+.email-input {
+  left: 583px;
+  top: 348px;
+  width: 450px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.password-input {
+  top: 472px;
+  left: 583px;
+  width: 450px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.email-input::placeholder,
+.password-input::placeholder {
+  color: #9781FD;
+  opacity: 1;
+}

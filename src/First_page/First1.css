@@ -1,0 +1,75 @@
+.Name {
+  position: absolute;
+  width: 204px;
+  height: 47px;
+  left: 100px;
+  top: 21px;
+  
+  font-family: 'Red Hat Display', sans-serif; 
+  font-weight: Italic; 
+  font-size: 40px;
+  line-height: 53px;
+  color: #000000;
+  
+}
+
+.Text1{
+position: absolute;
+width: 406px;
+height: 42px;
+left: 955px;
+top: 203px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 31px;
+
+color: #000000;
+}
+
+.Button1 {
+  position: absolute;
+  width: 252px;
+  height: 62px;
+  left: 980px;
+  top: 509px;
+  
+  background: #A08BFA;
+  box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  
+ 
+  
+  /* Текст по центру */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0); /* Цвет текста */
+  font-family: 'Popins', sans-serif; /* Шрифт из твоего проекта */
+  font-weight: 500; /* Насыщенность */
+  cursor: pointer;
+  
+  /* Для анимации при наведении */
+  transition: background 0.3s;
+}
+
+.Button1:hover {
+  background: #8A72F5; /* Темнее при наведении */
+}
+
+.Button1:focus {
+  outline: 2px solid #6A4DFF; /* Кастомный контур для accessibility */
+}
+
+.Image1{
+position: absolute;
+width: 750px;
+height: 589px;
+left: 71px;
+top: 108px;
+
+border-radius: 40px;
+
+}

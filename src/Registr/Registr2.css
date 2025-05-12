@@ -1,8 +1,10 @@
-.p1{
+
+
+.P6{
 position: absolute;
 width: 193px;
 height: 38px;
-left: 493px;
+left: 550px;
 top: 67px;
 
 font-family: 'Poppins';
@@ -15,3 +17,306 @@ color: #000000;
 
 
 }
+
+.P7{
+
+/* Если вы уже есть аккаунт */
+
+position: absolute;
+width: 380.64px;
+height: 20.36px;
+left: 550px;
+top: 123.84px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+
+color: #000000;
+
+
+}
+
+.B3{
+    /* Войти!! */
+
+position: absolute;
+width: 353.13px;
+height: 20.36px;
+left: 404px;
+top: 149.29px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+
+color: #9781FD;
+
+
+}
+
+.P8{
+
+/* Email */
+
+position: absolute;
+top: 214px;
+left: 550px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 20px;
+/* identical to box height */
+
+color: #9781FD;
+
+
+
+
+}
+
+
+
+
+.SP1{
+    /* Enter your email address */
+
+position: absolute;
+top: 241px;
+left: 581px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+color: #9781FD;
+
+}
+
+
+
+.P9{
+    /* Username */
+position: absolute;
+top: 304px;
+left: 550px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 20px;
+/* identical to box height */
+
+color: #9781FD;
+}
+
+
+
+.SP2{
+    /* Enter your User name */
+position: absolute;
+top: 330px;
+left: 581px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+color: #9781FD;
+}
+
+
+
+
+.P10{
+    /* Password */
+
+position: absolute;
+width: 73.38px;
+height: 16.97px;
+left: 550px;
+top: 394px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 20px;
+
+color: #9781FD;
+}
+
+
+
+.SP3{
+    /* Введите пароль */
+
+position: absolute;
+width: 185.73px;
+height: 20.36px;
+left: 581px;
+top: 419px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+
+color: #9781FD;
+}
+
+
+
+
+.P11{
+    /* Confrim Password */
+position: absolute;
+width: 137.58px;
+height: 16.97px;
+left: 550px;
+top: 484px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 20px;
+
+color: #9781FD;
+}
+
+
+
+.SP4{
+    /* Повторно введите пароль */
+
+position: absolute;
+width: 213.25px;
+height: 20.36px;
+left: 581px;
+top: 509px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+
+color: #9781FD;
+}
+
+
+
+.B4{
+    /* Rectangle 10 */
+
+position: absolute;
+width: 490px;
+height: 60px;
+left: 550px;
+top: 587px;
+
+background: #A08BFA;
+box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+border-radius: 32px;
+
+transition: background 0.3s;
+}
+
+.B4:hover {
+  background: #8A72F5; /* Темнее при наведении */
+}
+
+.B4:focus {
+  outline: 2px solid #6A4DFF; /* Кастомный контур для accessibility */
+}
+
+/* Стили для полей ввода (добавить в конец файла) */
+.SP1-input,
+.SP2-input,
+.SP3-input,
+.SP4-input {
+    position: absolute;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9781FD;
+    padding: 0;
+    margin: 0;
+}
+
+.SP1-input {
+    top: 241px;
+    left: 581px;
+    width: 300px;
+}
+
+.SP2-input {
+    top: 330px;
+    left: 581px;
+    width: 300px;
+}
+
+.SP3-input {
+    top: 419px;
+    left: 581px;
+    width: 300px;
+}
+
+.SP4-input {
+    top: 509px;
+    left: 581px;
+    width: 300px;
+}
+
+/* Плейсхолдеры */
+.SP1-input::placeholder,
+.SP2-input::placeholder,
+.SP3-input::placeholder,
+.SP4-input::placeholder {
+    color: #9781FD;
+    opacity: 1;
+}
+
+/* Разделители */
+.divider3, .divider4, .divider5, .divider6 {
+    height: 2.2px;
+    background-color: #9781FD;
+    position: absolute;
+    left: 550px;
+    width: 489px;
+}
+
+.divider3 { top: 267px; }
+.divider4 { top: 356px; }
+.divider5 { top: 446px; }
+.divider6 { top: 536px; }
+
+/* Иконки */
+.IMG3, .IMG4, .IMG5, .IMG6 {
+    position: absolute;
+    left: 550px;
+}
+
+.IMG3 { top: 244px; }
+.IMG4 { top: 332px; }
+.IMG5 { top: 423px; }
+.IMG6 { top: 511px; }

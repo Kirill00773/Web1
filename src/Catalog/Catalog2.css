@@ -1,0 +1,26 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* или flex-start */
+  padding: 20px;
+}
+
+.test1{
+
+    /* Каталог фильмов */
+
+position: absolute;
+
+left: 56px;
+top: 100px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 900;
+font-size: 64px;
+line-height: 96px;
+
+color: #000000;
+
+
+}

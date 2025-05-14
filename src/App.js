@@ -6,6 +6,7 @@ import Registr3 from './Registr/Registr1.jsx'
 import Home from './Home_Page/Home1.jsx'
 import ProtectedRoute from './Protected.jsx'
 import Prof from './Profil/Profil1.jsx'
+import Catal from './Catalog/Catalog1.jsx';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           } 
         />
   <Route path="/profil" element={<Prof/>}/>
+  <Route path="/catalog" element={<Catal/>}/>
   </Routes>
  </div>
 

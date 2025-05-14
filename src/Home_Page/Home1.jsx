@@ -31,7 +31,7 @@ function Home(){
                     </div>
             <button className="new">Новости</button>
             <button className="abt">О нас</button>
-            <button className="cat">Каталог</button>
+            <button className="cat" onClick={() => navigate('/catalog')}>Каталог</button>
             <div onClick={() => navigate('/profil')} style={{ cursor: 'pointer' }}>
                 <img className="IMG7" src="/img/Page5.svg" alt="Кнопка" />
             </div>

@@ -16,7 +16,7 @@ const handleLogout = async () => {
     };
  return(
     <div>
-            {/* остальная разметка */}
+           <h1>ТЕст</h1>
             <button onClick={handleLogout}>Выйти</button>
         </div>
     );

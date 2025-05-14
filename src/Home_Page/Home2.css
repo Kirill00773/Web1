@@ -1,0 +1,228 @@
+
+
+.bac{
+    /* Шапка */
+
+position: absolute;
+height: 90px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+background: #181818;
+border-radius: 0px;
+
+}
+
+.bac .Name1{
+     position: absolute;
+  width: 204px;
+  height: 47px;
+  left: 100px;
+  top: 21px;
+  
+  font-family: 'Red Hat Display', sans-serif; 
+  font-weight: Italic; 
+  font-size: 40px;
+  line-height: 53px;
+  color: #ffffff;
+}
+
+.bac .oval {
+    /* Group 39 */
+
+position: absolute;
+width: 490px;
+height: 55px;
+left: 485px;
+top: 25px;
+border-radius: 40px; /* Делаем овал */
+border: none;
+background: white;
+  padding: 0 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  outline: none;
+
+}
+
+.bac .new{
+ /* Новости */
+
+position: absolute;
+width: 87px;
+height: 23px;
+left: 1143px;
+top: 40px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 20px;
+/* or 100% */
+
+color: #FFFFFF;
+
+
+
+
+}
+
+.bac .abt{
+
+/* О нас */
+
+position: absolute;
+width: 57px;
+height: 23px;
+left: 1269px;
+top: 40px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 20px;
+/* or 100% */
+
+color: #FFFFFF;
+
+
+
+
+}
+
+.bac .cat{
+/* Каталог */
+
+/* Каталог */
+
+position: absolute;
+width: 94px;
+height: 23px;
+left: 1365px;
+top: 40px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 20px;
+/* or 100% */
+
+color: #FFFFFF;
+
+
+
+
+}
+
+.bac .IMG7{
+    position: absolute;
+    top: 27px;
+    right: 32px;
+}
+
+
+.t1{
+  /* Белорусское кино — честные отзывы и скрытые жемчужины! */
+position: absolute;
+width: 812px;
+height: 265px;
+left: 25px;
+top: 95px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 77px;
+
+color: #000000;
+
+
+}
+.t2{
+  /* Всегда хотели узнать, какие белорусские фильмы действительно стоит посмотреть? Искали объективные мнения без навязчивой рекламы? А может, хотели обсудить любимую кинокартину с такими же ценителями? */
+
+position: absolute;
+width: 813px;
+height: 179px;
+left: 25px;
+top: 386px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 130%;
+/* or 32px */
+
+color: #000000;
+
+
+}
+
+.st{
+    /* Rectangle 10 */
+
+position: absolute;
+width: 529px;
+height: 80px;
+left: 46px;
+top: 565px;
+
+background: #A08BFA;
+box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+border-radius: 32px;
+/* Посмотреть каталог фильмов */
+
+
+font-family: 'Inder';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 38px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+transition: background 0.3s;
+}
+
+.st:hover {
+  background: #8A72F5; /* Темнее при наведении */
+}
+
+.st:focus {
+  outline: 2px solid #6A4DFF; /* Кастомный контур для accessibility */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.IMG8{
+  position: absolute;
+  top: 157px;
+  left: 901px;
+  width: 620px;
+  height: 490px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.Dots1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 670px;
+  margin-left: 1187px;
+  
+}
+
+
+
+
+

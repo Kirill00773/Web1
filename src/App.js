@@ -5,6 +5,7 @@ import Vxod3 from './Vxod/vxod1.jsx';
 import Registr3 from './Registr/Registr1.jsx'
 import Home from './Home_Page/Home1.jsx'
 import ProtectedRoute from './Protected.jsx'
+import Prof from './Profil/Profil1.jsx'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             </ProtectedRoute>
           } 
         />
+  <Route path="/profil" element={<Prof/>}/>
   </Routes>
  </div>
 

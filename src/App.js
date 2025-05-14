@@ -1,8 +1,10 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Router } from 'react-router-dom';
 import FirstPage from './First_page/First.jsx';
 import Vxod3 from './Vxod/vxod1.jsx';
 import Registr3 from './Registr/Registr1.jsx'
+import Home from './Home_Page/Home1.jsx'
+import ProtectedRoute from './Protected.jsx'
 
 
 function App() {
@@ -12,7 +14,14 @@ function App() {
  <Route path="/" element={<FirstPage />} />
  <Route path="/login" element={<Vxod3 />} />
  <Route path="/register" element={<Registr3/>}/>
-
+ <Route 
+          path="/home" 
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          } 
+        />
   </Routes>
  </div>
 

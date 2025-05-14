@@ -320,3 +320,12 @@ transition: background 0.3s;
 .IMG4 { top: 332px; }
 .IMG5 { top: 423px; }
 .IMG6 { top: 511px; }
+
+
+.error-message{
+position: absolute;
+color: red;
+top: 547px;
+left: 550px;
+font-size: 16px;
+}

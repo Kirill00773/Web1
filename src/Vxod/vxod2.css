@@ -180,3 +180,10 @@ position: absolute;
   color: #9781FD;
   opacity: 1;
 }
+
+.error-message1{
+  position: absolute;
+  color: red;
+  top: 527px;
+  left:550px
+}

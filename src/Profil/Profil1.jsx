@@ -4,6 +4,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import { getFirestore, doc, getDoc, updateDoc, collection, getDocs } from 'firebase/firestore';
 import { MdEmail } from 'react-icons/md';
 import './Profil2.css'
+import Header from '../Components/Header';
 
 function Prof(){
   const navigate = useNavigate();
@@ -76,24 +77,7 @@ function Prof(){
 
   return(
     <div>
-      <header className="bac">
-                <div className="bac-content">
-            <h1 className="Name1">BelaRates</h1>
-            <div className="search-wrapper">
-                        <input 
-                            type="text" 
-                            className="oval"
-                            placeholder="  Поиск..." 
-                        />
-                    </div>
-            <button className="new">Новости</button>
-            <button className="abt">О нас</button>
-            <button className="cat" onClick={() => navigate('/catalog')}>Каталог</button>
-            <div onClick={() => navigate('/profil')} style={{ cursor: 'pointer' }}>
-                <img className="IMG7" src="/img/Page5.svg" alt="Кнопка" />
-            </div>
-            </div>
-            </header>
+      <Header/>
             <div className="profile-reviews-wrapper">
             <div className="profile-container">
         <div className="avatar-circle">
@@ -135,7 +119,7 @@ function Prof(){
       <div className="user-reviews-section">
   <h2 className="reviews-title">Ваши отзывы</h2>
   {userReviews.length === 0 ? (
-    <p className="no-reviews">Вы ещё не оставляли отзывов.</p>
+    <p className="no-reviews">Вы ещё не оставляли отзывов</p>
   ) : (
     <div className="user-reviews-grid">
       {userReviews.map((review) => (

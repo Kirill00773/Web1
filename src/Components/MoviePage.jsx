@@ -6,6 +6,7 @@ import ReviewForm from './ReviewForm';
 import './MoviePage1.css'
 import ReviewList from './Reviewlist';
 import MovieRating from './MovieRating';
+import Header from './Header.jsx'
 
 
 function MoviePage() {
@@ -37,25 +38,7 @@ const navigate = useNavigate();
 
   return (
     <div className="movie-page">
-        <header className="bac">
-        <div className="bac-content">
-          <h1 className="Name1">BelaRates</h1>
-          <div className="search-wrapper">
-            <input 
-              type="text" 
-              className="oval"
-              placeholder="  Поиск..." 
-            />
-          </div>
-          <button className="new">Новости</button>
-          <button className="abt">О нас</button>
-          <button className="cat" onClick={() => navigate('/catalog')}>Каталог</button>
-          <div onClick={() => navigate('/profil')} style={{ cursor: 'pointer' }}>
-            <img className="IMG7" src="/img/Page5.svg" alt="Кнопка" />
-          </div>
-        </div>
-        
-      </header>
+        <Header/>
       <div className="movie-header">
         <img
           src={`/posters/${movie.poster}`}

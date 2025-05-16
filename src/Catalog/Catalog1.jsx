@@ -2,9 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import MovieCard from './MovieCard';
 import './Catalog2.css'
+import Header from '../Components/Header';
 
 function Catal() {
   const navigate = useNavigate();
+
 
   const movies = [
     {
@@ -14,48 +16,60 @@ function Catal() {
       poster: 'Poster1.jpg', 
     },
     {
-        id: 'movies2',
+        id: 'movie2',
         title: 'Запретная зона',
         year: 2020,
         poster: 'Poster2.jpg'
     },
     {
-        id: 'movies3',
+        id: 'movie3',
         title: 'Иди и смотри',
         year: 1985,
         poster: 'Poster3.jpg'
     },
 
     {
-        id: 'movies3',
+        id: 'movie4',
         title: 'Атака мертвецов: Осовец',
         year: 2018,
         poster: 'Poster4.jpg'
-    }
-    
+    },
+
+    {
+        id: 'movie5',
+        title: 'Брестская крепость',
+        year: 2010,
+        poster: 'Poster8.jpg'
+    },
+
+    {
+        id: 'movie6',
+        title: 'Добро пожаловать в семью',
+        year: 2021,
+        poster: 'Poster9.jpg'
+    },
+
+    {
+        id: 'movie7',
+        title: 'Время вернуться',
+        year: 2024,
+        poster: 'Poster10.jpg'
+    },
+
+    {
+        id: 'movie5',
+        title: 'Инсайт',
+        year: 2009,
+        poster: 'Poster12.jpg'
+    },
+
+  
   ];
+
 
   return (
     <div>
-      <header className="bac">
-        <div className="bac-content">
-          <h1 className="Name1">BelaRates</h1>
-          <div className="search-wrapper">
-            <input 
-              type="text" 
-              className="oval"
-              placeholder="  Поиск..." 
-            />
-          </div>
-          <button className="new">Новости</button>
-          <button className="abt">О нас</button>
-          <button className="cat" onClick={() => navigate('/catalog')}>Каталог</button>
-          <div onClick={() => navigate('/profil')} style={{ cursor: 'pointer' }}>
-            <img className="IMG7" src="/img/Page5.svg" alt="Кнопка" />
-          </div>
-        </div>
-        
-      </header>
+     <Header/>
 <p className="test1">Каталог фильмов</p>
 <div className="movie-list">
   {movies.map((movie) => (

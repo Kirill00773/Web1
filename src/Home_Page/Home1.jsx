@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home2.css'
+import Header from '../Components/Header';
 
 const images = [
   '/img/Pages8.svg',
@@ -19,27 +20,10 @@ function Home(){
   }, []);
     return(
         <div>
-            <header className="bac">
-                <div className="bac-content">
-            <h1 className="Name1">BelaRates</h1>
-            <div className="search-wrapper">
-                        <input 
-                            type="text" 
-                            className="oval"
-                            placeholder="  Поиск..." 
-                        />
-                    </div>
-            <button className="new">Новости</button>
-            <button className="abt">О нас</button>
-            <button className="cat" onClick={() => navigate('/catalog')}>Каталог</button>
-            <div onClick={() => navigate('/profil')} style={{ cursor: 'pointer' }}>
-                <img className="IMG7" src="/img/Page5.svg" alt="Кнопка" />
-            </div>
-            </div>
-            </header>
+            <Header/>
             <h className= "t1">Белорусское кино — честные отзывы и скрытые жемчужины! </h>
             <h className="t2">Всегда хотели узнать, какие белорусские фильмы действительно стоит  посмотреть? Искали объективные мнения без навязчивой рекламы? А может,  хотели обсудить любимую кинокартину с такими же ценителями?</h>
-            <button className="st">Посмотреть каталог фильмов</button>
+            <button className="st" onClick={() => navigate('/catalog')} >Посмотреть каталог фильмов</button>
 
             <img
                 key={currentImageIndex}  

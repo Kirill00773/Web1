@@ -1,0 +1,52 @@
+
+
+.rating-circles {
+  display: flex;
+  gap: 10px;
+}
+
+.circle {
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+
+.circle.selected {
+  background-color: #be87b9;
+  color: black;
+}
+
+textarea {
+  resize: vertical;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}

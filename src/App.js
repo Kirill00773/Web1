@@ -7,7 +7,7 @@ import Home from './Home_Page/Home1.jsx'
 import ProtectedRoute from './Protected.jsx'
 import Prof from './Profil/Profil1.jsx'
 import Catal from './Catalog/Catalog1.jsx';
-import MoviePage from './MoviePage.jsx';
+import MoviePage from './Components/MoviePage.jsx';
 
 
 function App() {

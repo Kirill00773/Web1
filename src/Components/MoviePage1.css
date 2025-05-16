@@ -1,0 +1,151 @@
+
+
+.movie-container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.movie-poster {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.movie-details {
+  position: absolute;
+  top: 220px;           
+  left: 350px;          
+  right: 40px;          
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tit {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.yea {
+  font-size: 28px;
+  color: #666;
+  margin-top: -10px;
+}
+
+.resis,
+.dlitel,
+.jajr,
+.reit {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.review-section {
+  position: absolute;
+  top: 700px;
+  left: 40px;
+  right: 40px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.review-section h3 {
+  margin-top: 0;
+}
+
+.review-section label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+.review-section select,
+.review-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.review-section button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.review-section button:hover {
+  background-color: #333;
+}
+
+
+body {
+  padding-bottom: 300px;
+}
+
+.tab-buttons {
+  position: absolute;
+  top: 650px;
+  left: 50px;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.tab-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #d1b2e0;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-buttons button.active {
+  background-color: #b47fd3;
+  color: white;
+}
+
+
+
+.description-text {
+  position: absolute;
+  top: 700px;
+  left: 40px;
+  font-size: 18px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-list {
+  margin-top: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  color: #333;
+}
+
+.review-item {
+  margin-bottom: 15px;
+}
+

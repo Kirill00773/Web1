@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
-import { getFirestore, doc, getDoc, updateDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, updateDoc, collection, getDocs } from 'firebase/firestore';
 import { MdEmail } from 'react-icons/md';
 import './Profil2.css'
 
@@ -14,6 +14,8 @@ function Prof(){
   const [username, setUsername] = useState('');
   const [editing, setEditing] = useState(false);
   const [email, setEmail] = useState('');
+  const [userReviews, setUserReviews] = useState([]);
+  const [movieTitles, setMovieTitles] = useState({});
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -24,10 +26,40 @@ function Prof(){
         if (userSnap.exists()) {
           setUsername(userSnap.data().username);
         }
+         fetchUserReviews();
       }
     };
     fetchUserData();
   }, [user]);
+
+  const fetchUserReviews = async () => {
+  if (user) {
+    const db = getFirestore();
+    const reviews = [];
+    const titles = {};
+
+    
+    const movieIds = ['movie1', 'movie2']; 
+
+    for (const movieId of movieIds) {
+
+      const movieDoc = await getDoc(doc(db, 'movies', movieId));
+      if (movieDoc.exists()) {
+        titles[movieId] = movieDoc.data().title;
+      }
+
+      const reviewsSnapshot = await getDocs(collection(db, 'movies', movieId, 'reviews'));
+      reviewsSnapshot.forEach((doc) => {
+        const data = doc.data();
+        if (data.userId === user.uid) {
+          reviews.push({ ...data, id: doc.id, movieId });
+        }
+      });
+    }
+    setMovieTitles(titles);
+    setUserReviews(reviews);
+  }
+};
 
   const handleSave = async () => {
     if (user) {
@@ -62,7 +94,7 @@ function Prof(){
             </div>
             </div>
             </header>
-
+            <div className="profile-reviews-wrapper">
             <div className="profile-container">
         <div className="avatar-circle">
           {username.charAt(0).toUpperCase()}
@@ -80,7 +112,7 @@ function Prof(){
   </div>
 ) : (
   <>
-    <h2 className="Nn">{username}</h2>
+    <h2 className="user-name">{username}</h2>
     <div className="email-display">
       <p className="vash-email">Ваш Email</p>
   <MdEmail className="email-icon" />
@@ -99,6 +131,29 @@ function Prof(){
           <button onClick={handleLogout}>Выйти</button>
         </div>
       </div>
+
+      <div className="user-reviews-section">
+  <h2 className="reviews-title">Ваши отзывы</h2>
+  {userReviews.length === 0 ? (
+    <p className="no-reviews">Вы ещё не оставляли отзывов.</p>
+  ) : (
+    <div className="user-reviews-grid">
+      {userReviews.map((review) => (
+        <div key={review.id} className="user-review-card">
+          <div className="review-rating">
+            {[...Array(review.rating)].map((_, i) => (
+              <span key={i}>⭐</span>
+            ))}
+          </div>
+          <p className="review-text">"{review.text}"</p>
+          <small className="review-movie-id">Фильм: {movieTitles[review.movieId] || review.movieId}</small>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
+    </div>
     </div>
   )
 }

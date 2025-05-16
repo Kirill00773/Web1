@@ -28,12 +28,11 @@
   color: black;
 }
 
-textarea {
-  resize: vertical;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #888;
-  font-size: 14px;
+.review-date{
+   font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+  margin-left: 1266px;
 }
 
 .submit-btn {

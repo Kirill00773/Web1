@@ -49,3 +49,14 @@
 .submit-btn:hover {
   background-color: #333;
 }
+
+.sort-controls {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sort-controls select {
+  padding: 4px 8px;
+  border-radius: 4px;
+}

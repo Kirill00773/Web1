@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getFirestore, collection, onSnapshot, query, orderBy } from 'firebase/firestore';
+import { getFirestore, collection, onSnapshot, query, orderBy, doc, getDoc } from 'firebase/firestore';
 import { FaStar } from 'react-icons/fa';
 import './MoviePage1.css';
 
@@ -11,13 +11,30 @@ function ReviewList({ movieId }) {
     const reviewsRef = collection(db, 'movies', movieId, 'reviews');
     const q = query(reviewsRef, orderBy('createdAt', 'desc'));
 
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const reviewsData = querySnapshot.docs.map(docSnap => ({
+    const unsubscribe = onSnapshot(q, async (querySnapshot) => {
+      const rawReviews = querySnapshot.docs.map(docSnap => ({
         id: docSnap.id,
         ...docSnap.data(),
       }));
 
-      setReviews(reviewsData);
+      // Загружаем имена пользователей
+      const reviewsWithNames = await Promise.all(
+        rawReviews.map(async (review) => {
+          if (review.userId) {
+            try {
+              const userDoc = await getDoc(doc(db, 'users', review.userId));
+              if (userDoc.exists()) {
+                return { ...review, userName: userDoc.data().username };
+              }
+            } catch (err) {
+              console.error('Ошибка при получении имени пользователя:', err);
+            }
+          }
+          return { ...review, userName: 'Аноним' };
+        })
+      );
+
+      setReviews(reviewsWithNames);
     }, (error) => {
       console.error('Ошибка при загрузке отзывов:', error);
     });

@@ -5,6 +5,7 @@ import { FaRegClock, FaStar, FaFilm, FaUser } from 'react-icons/fa';
 import ReviewForm from './ReviewForm';
 import './MoviePage1.css'
 import ReviewList from './Reviewlist';
+import MovieRating from './MovieRating';
 
 
 function MoviePage() {
@@ -80,10 +81,7 @@ const navigate = useNavigate();
     <strong>Жанры:</strong> {movie.genres?.join(', ')}
   </p>
 
-  <p className="reit">
-    <FaStar style={{ marginRight: '6px', color: '#ffc107' }} />
-    <strong>Рейтинг:</strong> {movie.rating} (на основе {movie.ratingCount} оценок)
-  </p>
+  <MovieRating movieId={movieId} />
 </div>
       </div>
 

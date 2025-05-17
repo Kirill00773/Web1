@@ -9,6 +9,7 @@ import Prof from './Profil/Profil1.jsx'
 import Catal from './Catalog/Catalog1.jsx';
 import MoviePage from './Components/MoviePage.jsx';
 import ABout from './About/About1.jsx';
+import News from './News1/News2.jsx';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
   <Route path="/catalog" element={<Catal/>}/>
   <Route path="/movies/:movieId" element={<MoviePage />} />
   <Route path="/about" element={<ABout/>}/>
+  <Route path="/news" element={<News/>}/>
   </Routes>
  </div>
 

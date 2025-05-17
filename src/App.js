@@ -8,11 +8,13 @@ import ProtectedRoute from './Protected.jsx'
 import Prof from './Profil/Profil1.jsx'
 import Catal from './Catalog/Catalog1.jsx';
 import MoviePage from './Components/MoviePage.jsx';
+import ABout from './About/About1.jsx';
 
 
 function App() {
+  
   return (
- <div >
+ <div>
   <Routes>
  <Route path="/" element={<FirstPage />} />
  <Route path="/login" element={<Vxod3 />} />
@@ -28,6 +30,7 @@ function App() {
   <Route path="/profil" element={<Prof/>}/>
   <Route path="/catalog" element={<Catal/>}/>
   <Route path="/movies/:movieId" element={<MoviePage />} />
+  <Route path="/about" element={<ABout/>}/>
   </Routes>
  </div>
 

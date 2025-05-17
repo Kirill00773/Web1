@@ -24,6 +24,7 @@ function FirstPage(){
   };
     return(
         <div>
+          <img className="logot" src= "./img/Pages10.svg"/>
             <h1 className="Name">BelaRates</h1>
             <img
                 key={currentImageIndex}  

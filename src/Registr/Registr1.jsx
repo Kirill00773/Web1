@@ -51,6 +51,7 @@ function Registr3() {
 
     return (
         <div>
+            <img className="logot" src= "./img/Pages10.svg"/>
             <h1 className="Name">BelaRates</h1>
             <p className="P6">Регистрация</p>
             <p className="P7">Если вы уже в аккаунте</p>

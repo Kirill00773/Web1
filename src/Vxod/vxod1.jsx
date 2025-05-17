@@ -39,6 +39,7 @@ function Vxod3() {
 
     return (
         <div>
+            <img className="logot" src= "./img/Pages10.svg"/>
             <h1 className="Name">BelaRates</h1>
             <p className="P1">Вход</p>
             <p className="P2">Если у вас нет аккаунта</p>

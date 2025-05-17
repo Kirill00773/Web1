@@ -103,6 +103,14 @@ animation: fadeIn 1s ease-in-out;
   background-color: #6a5acd; 
 }
 
+.logot{
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 48px;
+  top: 28px;
+}
+
 
 
 

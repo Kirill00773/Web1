@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getFirestore, collection, onSnapshot, query, orderBy, doc, getDoc} from 'firebase/firestore';
+import { getFirestore, collection, onSnapshot, query, doc, getDoc} from 'firebase/firestore';
 import { FaStar } from 'react-icons/fa';
 import './MoviePage1.css';
 

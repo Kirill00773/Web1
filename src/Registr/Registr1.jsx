@@ -14,7 +14,7 @@ function Registr3() {
     const [error, setError] = useState('');
 
     const handleRegister = async () => {
-        setError(''); // сбрасываем старую ошибку
+        setError(''); 
 
         if (password !== confirmPassword) {
             setError('Пароли не совпадают');

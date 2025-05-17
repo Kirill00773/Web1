@@ -1,0 +1,64 @@
+.news-container1 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px;
+  position: absolute;
+  left: 350px;
+  color: #000000;
+}
+
+.news-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.news-image {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+}
+
+.news-text {
+  font-size: 16px;
+  line-height: 1.6;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.news-text.collapsed {
+  max-height: 270px; /* ~3 абзаца */
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+.news-text.expanded {
+  max-height: 1000px; /* достаточно для всего текста */
+}
+
+.toggle-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #444;
+}
+
+.news-container2{
+    max-width: 900px;
+  margin: 0 auto;
+  padding: 100px;
+  position: absolute;
+  left: 350px;
+  top: 1250px;
+  color: #000000;
+}

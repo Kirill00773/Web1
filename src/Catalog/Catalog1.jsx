@@ -57,7 +57,7 @@ function Catal() {
     },
 
     {
-        id: 'movie5',
+        id: 'movie8',
         title: 'Инсайт',
         year: 2009,
         poster: 'Poster12.jpg'

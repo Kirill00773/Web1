@@ -26,8 +26,8 @@ BelaRates — это современный веб-сервис, где поль
 Если да то можете переходить к следующим пунктам:
 1. Клонируйте репозиторий:
     ```bash
-   git clone https://github.com/your-username/belarates.git
-   cd belarates
+   git clone https://github.com/Kirill00773/Web1.git
+   cd Web1
     ```
 2. Установите зависимости:
 

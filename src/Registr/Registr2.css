@@ -329,3 +329,17 @@ top: 547px;
 left: 550px;
 font-size: 16px;
 }
+
+.icon-container1 {
+  position: absolute;
+  left: 1010px; 
+  top: 435px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9781FD;
+  opacity: 0.7;
+}
+
+.icon-containe1:hover {
+  opacity: 1;
+}

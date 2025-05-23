@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { auth } from '../firebase';
 import './vxod2.css';
 
 function Vxod3() {
     const navigate = useNavigate();
-
+    const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -62,12 +63,17 @@ function Vxod3() {
             <div className="input-wrapper">
                 <img className="IMG2" src="/img/page3.svg" alt="Password"/>
                 <input 
-                    type="password" 
-                    className="password-input" 
-                    placeholder="Введите ваш пароль"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                type={showPassword ? "text" : "password"} 
+                className="password-input" 
+                placeholder="Введите ваш пароль"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+
+                
+    />
+            <div className="icon-container" onClick={() => setShowPassword(!showPassword)}>
+        {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
+            </div>
             </div>
             <div className="divider2"></div>
 

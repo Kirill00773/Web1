@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { auth, db } from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import './Registr2.css';
 
 function Registr3() {
     const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -82,12 +84,15 @@ function Registr3() {
             <p className="P10">Password</p>
             <img className="IMG5" src="/img/Page3.svg" alt="Password"/>
             <input 
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 className="SP3-input"
                 placeholder="Введите пароль"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
+                 value={password}
+                 onChange={(e) => setPassword(e.target.value)}
+                />
+            <div className="icon-container1" onClick={() => setShowPassword(!showPassword)}>
+            {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
+  </div>
             <div className="divider5"></div>
 
             <p className="P11">Confirm Password</p>

@@ -187,3 +187,20 @@ position: absolute;
   top: 527px;
   left:550px
 }
+
+
+
+.icon-container {
+  position: absolute;
+  left: 1010px; 
+  top: 490px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9781FD;
+  opacity: 0.7;
+}
+
+.icon-container:hover {
+  opacity: 1;
+}
+

@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+BelaRates — Сайт с отзывами о белорусских фильмах
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+  
 
-In the project directory, you can run:
+BelaRates — это современный веб-сервис, где пользователи могут находить белорусские фильмы, делиться отзывами и оценками, а также узнавать последние новости из мира отечественного кинематографа
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Используемые технологии
+- React — библиотека для создания пользовательского интерфейса
+- React Router — маршрутизация между страницами
+- Firebase:
+  - Authentication — регистрация и вход пользователей
+  - Cloud Firestore — база данных для фильмов и отзывов
+- CSS— стилизация компонентов
+- React Icons — иконки для интерфейса
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Запуск проекта локально
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+>Для начала вы должны проверить установлен ли у вас Node.j
+Если да то можете переходить к следующим пунктам:
+1. Клонируйте репозиторий:
+    ```bash
+   git clone https://github.com/your-username/belarates.git
+   cd belarates
+    ```
+2. Установите зависимости:
 
-### `npm run eject`
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Cоздайте файл конфигурации Firebase:
+В папке src/ создайте файл firebase.js и добавьте туда свою конфигурацию:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MSG_ID",
+  appId: "YOUR_APP_ID"
+};
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
 
-## Learn More
+4. Запустите проект:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Откроется http://localhost:3000
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Сайт задеплоен по адресу: belaratess.netlify.app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Руководство пользователя:
+- Приветственная страница (/) — автослайд и кнопка "Начать"
+- Вход (/login) — авторизация с Firebase, проверка ошибок
+- Регистрация (/register) — создание аккаунта и сохранение имени
+- Главная страница (/home) — краткое описание платформы, переход к каталогу
+- Каталог фильмов (/catalog) — просмотр карточек фильмов, переход к детальной информации
+- Страница фильма (/movies/:id):
 
-### `npm run build` fails to minify
+    постер, описание, жанры, режиссёр
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    карточки "Описание" и "Отзывы"
+
+    форма оставления отзыва с оценкой
+
+    список отзывов с сортировкой
+
+- Профиль (/profil) — отображение имени и всех отзывов пользователя (с возможостью менять имя)
+- Новости (/news) — последние события из мира белорусского кино
+- О нас (/about) — миссия проекта и ценности
+
+
+
+
+Особенности:
+- Реализация оценок с помощью звёзд и средним рейтингом
+- Отзывы с сортировкой по дате и оценке
+- Уникальный дизайн карточек фильмов
+- Хедер с навигацией по всему приложению
+
+
+
